@@ -1,4 +1,4 @@
-# Vertex AI Workbench Instance simple example
+# Vertex AI Workbench Instance test example
 Deploy private vertex AI Workbench Instance without proxy. Instance will be accessed using IAP (Identity aware proxy).
 
 This example creates:
@@ -10,23 +10,15 @@ This example creates:
 
 To run this example execute:
 
-```bash
-export TF_VAR_project_id="your_project_id"
-```
+Raise the PR request
 
-
-```tf
-terraform init
-terraform plan
-terraform apply
-```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | project\_id | The ID of the project in which the resource belongs | `string` | n/a | yes |
-
+| workbench\_region | The region of the vertex ai workbench in which the resource belongs | `string` | n/a | yes |
 ## Outputs
 
 | Name | Description |

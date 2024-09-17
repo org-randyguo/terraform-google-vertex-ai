@@ -11,12 +11,12 @@ output "project_id" {
 }
 
 output "workbench_name" {
-  value       = module.simple_vertex_ai_workbench.workbench_name
+  value       = module.test-project-ai_workbench.workbench_name
   description = "The name of the Vertex AI Workbench instance"
 }
 
 output "workbench" {
-  value       = module.simple_vertex_ai_workbench
+  value       = module.test-project-ai_workbench
   description = "The Vertex AI Workbench instance"
 }
 
