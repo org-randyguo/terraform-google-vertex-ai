@@ -15,7 +15,7 @@ module "test-project-ai_workbench" {
   version = "~> 0.1"
 
   name       = "test-project-ai-workbench"
-  location   = "asia-east2-a"
+  location   = "australia-southeast1-a"
   project_id = var.project_id
 
   machine_type = "e2-standard-2"

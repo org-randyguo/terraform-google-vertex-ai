@@ -22,7 +22,7 @@ variable "name" {
 variable "location" {
   description = "Zone in which workbench instance should be created"
   type        = string
-  default     = "asia-east2-b"
+  default     = "australia-southeast1-a"
 }
 
 variable "project_id" {
