@@ -12,5 +12,5 @@ variable "project_id" {
 variable "workbench_region" {
   description = "The region of vertext ai workbench in which the resource belongs"
   type        = string
-  default     = "asia-east2"
+  default     = "asia-east2-b"
 }
