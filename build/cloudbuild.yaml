@@ -7,8 +7,6 @@ steps:
     - |
       terraform init 
   dir: 'test-project-ai'
-  env:
-    - "TF_VAR_project_id=${PROJECT_ID}"
 
 - name: 'asia-east2-docker.pkg.dev/${PROJECT_ID}/tools/terraform'
   entrypoint: 'bash'
@@ -17,26 +15,14 @@ steps:
     - |
       terraform validate 
   dir: 'test-project-ai'
-  env:
-    - "TF_VAR_project_id=${PROJECT_ID}"
-# - name: 'asia-east2-docker.pkg.dev/${PROJECT_ID}/tools/terraform'
-#   entrypoint: 'bash'
-#   args:
-#     - '-c'
-#     - |
-#       terraform plan -out=tfoutput.plan
-#   dir: 'test-project-ai'
-#   env:
-#     - "TF_VAR_project_id=${PROJECT_ID}"  
+
 - name: 'asia-east2-docker.pkg.dev/${PROJECT_ID}/tools/terraform'
   entrypoint: 'bash'
   args:
     - '-c'
     - |
-      terraform plan -destory
+      terraform plan -out=tfoutput.plan
   dir: 'test-project-ai'
-  env:
-    - "TF_VAR_project_id=${PROJECT_ID}"
     
 # - name: 'asia-east2-docker.pkg.dev/${PROJECT_ID}/tools/terraform'
 #   entrypoint: 'bash'
