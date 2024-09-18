@@ -19,33 +19,47 @@ steps:
   dir: 'test-project-ai'
   env:
     - "TF_VAR_project_id=${PROJECT_ID}"
-    
+# - name: 'asia-east2-docker.pkg.dev/${PROJECT_ID}/tools/terraform'
+#   entrypoint: 'bash'
+#   args:
+#     - '-c'
+#     - |
+#       terraform plan -out=tfoutput.plan
+#   dir: 'test-project-ai'
+#   env:
+#     - "TF_VAR_project_id=${PROJECT_ID}"  
 - name: 'asia-east2-docker.pkg.dev/${PROJECT_ID}/tools/terraform'
   entrypoint: 'bash'
   args:
     - '-c'
     - |
-      terraform plan -destory -out=tfoutput.plan
+      terraform plan -destory
   dir: 'test-project-ai'
   env:
     - "TF_VAR_project_id=${PROJECT_ID}"
     
+# - name: 'asia-east2-docker.pkg.dev/${PROJECT_ID}/tools/terraform'
+#   entrypoint: 'bash'
+#   args:
+#     - '-c'
+#     - |
+#       terraform show -no-color tfoutput.plan 
+#   dir: 'test-project-ai'
+#   env:
+#     - "TF_VAR_project_id=${PROJECT_ID}"   
+# - name: 'asia-east2-docker.pkg.dev/${PROJECT_ID}/tools/terraform'
+#   entrypoint: 'bash'
+#   args:
+#     - '-c'
+#     - |
+#       terraform apply -auto-approve tfoutput.plan
+#   dir: 'test-project-ai'
 - name: 'asia-east2-docker.pkg.dev/${PROJECT_ID}/tools/terraform'
   entrypoint: 'bash'
   args:
     - '-c'
     - |
-      terraform show -no-color tfoutput.plan 
-  dir: 'test-project-ai'
-  env:
-    - "TF_VAR_project_id=${PROJECT_ID}"   
-    
-- name: 'asia-east2-docker.pkg.dev/${PROJECT_ID}/tools/terraform'
-  entrypoint: 'bash'
-  args:
-    - '-c'
-    - |
-      terraform apply -destory -auto-approve tfoutput.plan
+      terraform apply -destory
   dir: 'test-project-ai'
   
 # - name: 'gcr.io/cloud-builders/curl:latest'
