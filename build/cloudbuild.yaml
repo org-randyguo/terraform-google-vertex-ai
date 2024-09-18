@@ -45,7 +45,7 @@ steps:
   args:
     - '-c'
     - |
-      terraform destory -auto-approve
+      terraform destroy -auto-approve
   dir: 'test-project-ai'
   
 # - name: 'gcr.io/cloud-builders/curl:latest'
