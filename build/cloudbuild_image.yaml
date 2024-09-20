@@ -17,7 +17,7 @@ steps:
   - .
   dir: 'build'
   
-- name: 'asia-east2.pkg.dev/${PROJECT_ID}/polaris/terraform:latest}'
+- name: 'asia-east2.pkg.dev/${PROJECT_ID}/polaris/terraform:latest'
   args: ['--version']
 
 images:
